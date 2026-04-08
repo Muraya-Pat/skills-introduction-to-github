@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Math Flashcard Game 🎓</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- Title -->
+    <h1>🧮 Math Flash!</h1>
+    <p class="subtitle">Answer as many questions as you can in 60 seconds.</p>
+
+    <!-- Stats: score + timer -->
+    <div class="stats">
+      <span class="score-label">Score: <strong id="score">0</strong></span>
+      <span class="timer-label">⏱ <strong id="timer">60</strong>s</span>
+    </div>
+
+    <!-- Active game area -->
+    <div id="game-area">
+
+      <!-- Question display -->
+      <div class="question-box">
+        <p>Solve this!</p>
+        <div class="question-text" id="question">Loading…</div>
+      </div>
+
+      <!-- Answer input + submit -->
+      <div class="answer-area">
+        <input
+          type="number"
+          id="answer-input"
+          placeholder="Your answer"
+          autocomplete="off"
+          aria-label="Your answer"
+        />
+        <button id="submit-btn" class="btn-submit">Submit</button>
+      </div>
+
+      <!-- Feedback message -->
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+
+    </div><!-- /#game-area -->
+
+    <!-- Game-over screen (hidden until timer expires) -->
+    <div id="game-over" class="game-over hidden">
+      <h2>⏰ Time's up!</h2>
+      <p>You scored <strong id="final-score">0</strong> points. Great effort!</p>
+      <button id="restart-btn" class="btn-restart">🔄 Play Again</button>
+    </div>
+
+  </div><!-- /.card -->
+
+  <script src="script.js"></script>
+</body>
+</html>
