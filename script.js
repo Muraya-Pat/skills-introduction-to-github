@@ -144,7 +144,7 @@ function showGameOver() {
 function startGame() {
   score    = 0;
   timeLeft = 60;
-  timerEl.style.color = '';       // reset timer colour
+  timerEl.style.color = '';       // reset timer color
 
   updateScoreDisplay();
   stopTimer();
